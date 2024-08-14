@@ -1,4 +1,4 @@
-def readExcelTable(filePath, sheetName) {
+def call(filePath, sheetName) {
     FileInputStream file = new FileInputStream(new File(filePath))
     Workbook workbook = new XSSFWorkbook(file)
     Sheet sheet = workbook.getSheet(sheetName)
