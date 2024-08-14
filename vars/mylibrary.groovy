@@ -1,3 +1,9 @@
+@Grab(group='org.apache.poi', module='poi-ooxml', version='5.2.3')
+import org.apache.poi.ss.usermodel.*
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import java.io.File
+import java.io.FileInputStream
+
 def call(filePath, sheetName) {
     FileInputStream file = new FileInputStream(new File(filePath))
     Workbook workbook = new XSSFWorkbook(file)
